@@ -1,0 +1,159 @@
+/* ===== GLOBAL ===== */
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:radial-gradient(circle at top,#0f2027,#000);
+color:#eaeaea;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* ===== GLOW ANIMATION ===== */
+@keyframes neonGlow{
+0%{box-shadow:0 0 5px #ff2fdc,0 0 10px #ff2fdc;}
+50%{box-shadow:0 0 20px #ff2fdc,0 0 40px #8f00ff;}
+100%{box-shadow:0 0 5px #00f7ff,0 0 15px #00f7ff;}
+}
+
+/* ===== CENTER ===== */
+.center{
+margin-top:40vh;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+display:inline-block;
+margin:20px;
+padding:12px 32px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+color:#fff;
+background:linear-gradient(135deg,#ff2fdc,#8f00ff);
+animation:neonGlow 3s infinite alternate;
+}
+
+/* ===== HEADINGS ===== */
+h1,h2{
+text-shadow:0 0 10px #ff2fdc,0 0 25px #8f00ff;
+}
+
+/* ===== GLASS CARD ===== */
+.card{
+margin:90px auto;
+width:320px;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.15);
+animation:neonGlow 4s infinite alternate;
+}
+
+/* ===== TEXT BOX ===== */
+.box{
+margin:30px;
+padding:25px;
+border-radius:25px;
+background:rgba(255,255,255,0.06);
+box-shadow:0 0 15px rgba(255,0,200,0.3);
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:160px;
+height:210px;
+border-radius:18px;
+object-fit:cover;
+border:2px solid transparent;
+box-shadow:0 0 15px rgba(0,255,255,0.4);
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00f7ff,0 0 50px #ff2fdc;
+}
+
+/* ===== INPUT ===== */
+input{
+padding:10px 15px;
+border-radius:20px;
+border:none;
+outline:none;
+text-align:center;
+font-size:16px;
+background:#111;
+color:#fff;
+box-shadow:0 0 10px #8f00ff;
+}
+
+/* ===== YES / NO BUTTONS ===== */
+.buttons button{
+padding:12px 28px;
+margin:12px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+color:#fff;
+}
+
+.yes{
+background:linear-gradient(135deg,#00ffcc,#00f7ff);
+box-shadow:0 0 15px #00f7ff;
+}
+
+.no{
+background:linear-gradient(135deg,#ff2fdc,#ff0055);
+box-shadow:0 0 15px #ff2fdc;
+}
+
+/* ===== SECRET FLOATING HEARTS ===== */
+body::after{
+content:"💜 💙 💖 💫";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+font-size:40px;
+opacity:0.05;
+animation:floatUp 20s linear infinite;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+from{transform:translateY(100%);}
+to{transform:translateY(-100%);}
+}
+
+/* ===== SMALL TEXT ===== */
+.tap{
+opacity:0.7;
+font-size:14px;
+}
+.cursor{
+position:fixed;
+width:8px;
+height:8px;
+border-radius:50%;
+pointer-events:none;
+background:#00f7ff;
+box-shadow:0 0 10px #00f7ff,0 0 20px #ff2fdc;
+animation:fadeOut 1s linear forwards;
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+transform:scale(3);
+}
+}

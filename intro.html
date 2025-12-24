@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Yashu 💖</title>
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+color:white;
+font-family:Segoe UI;
+overflow:hidden;
+}
+h1{
+font-size:50px;
+animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+from{opacity:0.5; text-shadow:0 0 10px pink;}
+to{opacity:1; text-shadow:0 0 30px hotpink;}
+}
+</style>
+</head>
+<body>
+
+<h1>✨ Yashu ✨</h1>
+
+<script>
+setTimeout(()=>{window.location="special.html";},3000);
+</script>
+<script>
+document.addEventListener("mousemove",function(e){
+let c=document.createElement("div");
+c.className="cursor";
+c.style.left=e.clientX+"px";
+c.style.top=e.clientY+"px";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),800);
+});
+</script>
+
+</body>
+</html>

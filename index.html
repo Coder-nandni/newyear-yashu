@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Just For You 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="center">
+<h1>✨ Hey Yashu ✨</h1>
+<p>This page is only for someone special…</p>
+<a class="btn" href="special.html">Enter 💌</a>
+</div>
+<script>
+document.addEventListener("mousemove",function(e){
+let c=document.createElement("div");
+c.className="cursor";
+c.style.left=e.clientX+"px";
+c.style.top=e.clientY+"px";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),800);
+});
+</script>
+
+</body>
+</html>

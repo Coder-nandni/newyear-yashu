@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Feelings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 class="heading">💗 Something I Never Said 💗</h2>
+
+<div class="box">
+  <p id="typeText"></p>
+</div>
+
+<a class="btn" href="gallery.html">See Memories 📸</a>
+
+<!-- 🔥 NEON CURSOR TRAIL -->
+<script>
+document.addEventListener("mousemove",function(e){
+  let c=document.createElement("div");
+  c.className="cursor";
+  c.style.left=e.clientX+"px";
+  c.style.top=e.clientY+"px";
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),800);
+});
+</script>
+
+<!-- ⌨️ TYPING TEXT EFFECT -->
+<script>
+let text = "Yashu… 💖\nI don’t know when it started,\nbut you slowly became my favourite thought.\n\nThis New Year feels special,\nbecause of you ✨";
+let i = 0;
+
+function typeEffect(){
+  if(i < text.length){
+    document.getElementById("typeText").innerHTML +=
+      (text.charAt(i) === "\n") ? "<br>" : text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 60);
+  }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>

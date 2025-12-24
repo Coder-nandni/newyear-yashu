@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moments</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2 class="heading">📷 Little Moments</h2>
+<div class="gallery">
+<img src="images/img5.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+</div>
+<a class="btn" href="wish.html">Almost There 💫</a>
+<script>
+document.addEventListener("mousemove",function(e){
+let c=document.createElement("div");
+c.className="cursor";
+c.style.left=e.clientX+"px";
+c.style.top=e.clientY+"px";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),800);
+});
+</script>
+
+</body>
+</html>

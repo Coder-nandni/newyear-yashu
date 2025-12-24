@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yashu 💖</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.buttons{
+margin-top:20px;
+}
+
+.buttons button{
+padding:12px 28px;
+margin:10px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+.yes{
+background:linear-gradient(135deg,#00ffcc,#00f7ff);
+color:#000;
+}
+
+.no{
+background:linear-gradient(135deg,#ff2fdc,#ff0055);
+color:#fff;
+}
+
+@keyframes fly{
+from{transform:translateY(0); opacity:1;}
+to{transform:translateY(-600px); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3">
+</audio>
+
+<div class="card">
+
+<h1>💞 Yashu, One Question 💞</h1>
+
+<p id="typeText"></p>
+
+<div class="buttons">
+  <button class="yes" onclick="goYes()">YES 💕</button>
+  <button class="no" onclick="goNo()">NO 🙂</button>
+</div>
+
+</div>
+
+<!-- 🖱️ NEON CURSOR -->
+<script>
+document.addEventListener("mousemove",function(e){
+  let c=document.createElement("div");
+  c.className="cursor";
+  c.style.left=e.clientX+"px";
+  c.style.top=e.clientY+"px";
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),800);
+});
+</script>
+
+<!-- ⌨️ TYPING EFFECT -->
+<script>
+let text = "Yashu… 💖\nThis year feels different,\nbecause of you 💫\n\nWill you be part of my story? 💕";
+let i = 0;
+
+function typeEffect(){
+  if(i < text.length){
+    document.getElementById("typeText").innerHTML +=
+      (text.charAt(i) === "\n") ? "<br>" : text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 60);
+  }
+}
+
+typeEffect();
+</script>
+
+<!-- 🔀 YES / NO REDIRECT -->
+<script>
+function goYes(){
+  document.getElementById("music").play();
+  setTimeout(()=>{ window.location="yes.html"; },800);
+}
+
+function goNo(){
+  window.location="no.html";
+}
+</script>
+
+</body>
+</html>

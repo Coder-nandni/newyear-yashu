@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Surprise 🎉</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3">
+</audio>
+
+<div class="card" onclick="playMusic()">
+<h1>🎉 Happy New Year 2026 🎉</h1>
+<p>
+Stay happy 💫  
+Stay blessed 🌸  
+Keep smiling always 😊
+</p>
+<p class="tap">Tap for music 🎶</p>
+</div>
+
+<script>
+function playMusic(){
+document.getElementById("music").play();
+}
+</script>
+<script>
+document.addEventListener("mousemove",function(e){
+let c=document.createElement("div");
+c.className="cursor";
+c.style.left=e.clientX+"px";
+c.style.top=e.clientY+"px";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),800);
+});
+</script>
+
+</body>
+</html>
